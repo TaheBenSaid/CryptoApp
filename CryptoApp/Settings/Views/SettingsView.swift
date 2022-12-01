@@ -11,10 +11,9 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     
     let defaultURL = URL(string: "https://www.google.com")!
-    let youtubeURL = URL(string: "https://www.youtibe.com/c/swiftfulthinking")!
-    let coffeeURL = URL(string: "https://www.buymeaCofee.com/nicksarno")!
+    let youtubeURL = URL(string: "https://www.youtube.com/")!
     let coinGeckoURL = URL(string: "https://www.coingecko.com")!
-    let personalURL = URL(string: "https://www.nicksarno.com")!
+    let personalURL = URL(string: "https://www.linkedin.com/in/tah%C3%A9-ben-said-58092b233/")!
     
     var body: some View {
         NavigationView {
@@ -52,9 +51,8 @@ extension SettingsView {
             }
             .padding(.vertical)
             Link("Subscribe on Youtube", destination: youtubeURL)
-            Link("Support his coffee addiction", destination: coffeeURL)
         } header: {
-            Text("Swiftful Thinking")
+            Text("App Infos")
         }
     }
     

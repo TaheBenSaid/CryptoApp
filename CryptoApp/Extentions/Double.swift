@@ -72,7 +72,7 @@ extension Double {
     ///  ´´´
     ///  Convert 1.23456 to "$1.23"
     ///  ´´´
-
+    
     func asNumberString() -> String {
         return String(format: "%.2f", self)
     }
@@ -81,7 +81,7 @@ extension Double {
     ///  ´´´
     ///  Convert 1.23456 to "$1.23%"
     ///  ´´´
-
+    
     func asPercentString() -> String {
         return asNumberString() + "%"
     }
@@ -100,7 +100,7 @@ extension Double {
     func formattedWithAbbreviations() -> String {
         let num = abs(Double(self))
         let sign = (self < 0) ? "-" : ""
-
+        
         switch num {
         case 1_000_000_000_000...:
             let formatted = num / 1_000_000_000_000
@@ -120,7 +120,7 @@ extension Double {
             return "\(sign)\(stringFormatted)K"
         case 0...:
             return self.asNumberString()
-
+            
         default:
             return "\(sign)\(self)"
         }
